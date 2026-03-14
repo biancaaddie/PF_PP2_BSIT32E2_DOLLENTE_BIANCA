@@ -1,34 +1,41 @@
-body{
-  font-family: Arial;
-  margin:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  background:#222;
-  color:white;
-  padding:15px;
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar ul{
-  display:flex;
-  list-style:none;
-  gap:20px;
+body {
+  background: #0b1120;
+  color: #f8fafc;
 }
 
-.hero{
-  text-align:center;
-  padding:80px;
-  background:#f4f4f4;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-section{
-  padding:50px;
+section {
+  padding: 80px 8%;
 }
 
-.project{
-  border:1px solid #ddd;
-  padding:15px;
-  margin:10px 0;
+.section-header {
+  margin-bottom: 36px;
+}
+
+.section-header h2 {
+  font-size: 2.4rem;
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.7;
 }

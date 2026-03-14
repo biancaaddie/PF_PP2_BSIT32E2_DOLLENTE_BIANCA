@@ -1,60 +1,40 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import "./Projects.css";
 
 function Projects() {
-  const projectList = [
+  const projects = [
     {
-      title: "Student Management System",
-      description: "Full stack system built with React and Node.js",
-      github: "https://github.com/biancaaddie/student-management",
-      demo: "https://student-management.example.com",
-      image: "/images/student-management.png", // Add your images in public folder
+      title: "Student Information System",
+      description:
+        "A sample academic project that manages student records, schedules, and profile information in a simple and organized interface.",
     },
     {
-      title: "Todo App",
-      description: "Simple productivity application",
-      github: "https://github.com/biancaaddie/todo-app",
-      demo: null,
-      image: "/images/todo-app.png",
+      title: "Portfolio Website",
+      description:
+        "A personal website built to showcase my academic background, skills, and contact details in a modern design.",
+    },
+    {
+      title: "Task Management App",
+      description:
+        "A simple concept for helping students organize school tasks, deadlines, and daily priorities efficiently.",
     },
   ];
 
   return (
-    <section id="projects" className="py-5" data-aos="fade-up">
-      <Container>
-        <h2 className="mb-4">My Projects</h2>
-        <Row>
-          {projectList.map((project, idx) => (
-            <Col md={6} lg={4} key={idx} className="mb-4">
-              <Card className="h-100 shadow-sm">
-                {project.image && (
-                  <Card.Img variant="top" src={project.image} alt={project.title} />
-                )}
-                <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text>{project.description}</Card.Text>
-                  <Button
-                    href={project.github}
-                    target="_blank"
-                    variant="primary"
-                    className="me-2"
-                  >
-                    GitHub
-                  </Button>
-                  {project.demo && (
-                    <Button
-                      href={project.demo}
-                      target="_blank"
-                      variant="outline-primary"
-                    >
-                      Live Demo
-                    </Button>
-                  )}
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    <section id="projects" className="projects">
+      <div className="section-header">
+        <h2>Projects</h2>
+        <p>Here are some sample projects you can showcase in your portfolio.</p>
+      </div>
+
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <span className="project-tag">Project {index + 1}</span>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -1,21 +1,44 @@
-import { Container, Button } from "react-bootstrap";
+import "./Hero.css";
+import profile from "../assets/bianca.jpg";
 
 function Hero() {
   return (
-    <section
-      id="home"
-      className="bg-light text-center py-5"
-      data-aos="fade-up"
-    >
-      <Container>
-        <h1 className="display-4">Hello, I'm Bianca 👋</h1>
-        <p className="lead">
-          A Computer Science student passionate about Web Development
+    <section id="home" className="hero">
+
+      <div className="hero-left">
+        <span className="hero-badge">Student Portfolio</span>
+
+        <h1>Bianca Dollente</h1>
+        <h2>BSIT 3rd Year Student</h2>
+        <p className="hero-school">Lyceum of Alabang</p>
+
+        <p className="hero-text">
+          I am an Information Technology student who enjoys creating clean,
+          modern, and user-friendly websites. I am passionate about learning
+          new technologies and improving my skills through projects and
+          hands-on practice.
         </p>
-        <Button href="#projects" variant="primary" size="lg">
-          View My Projects
-        </Button>
-      </Container>
+
+        <div className="hero-buttons">
+          <a href="#contact" className="btn primary">Contact Me</a>
+
+          <a
+            href="https://github.com/biancaaddie"
+            target="_blank"
+            rel="noreferrer"
+            className="btn secondary"
+          >
+            View GitHub
+          </a>
+        </div>
+      </div>
+
+      <div className="hero-right">
+        <div className="profile-card">
+          <img src={profile} alt="Bianca" />
+        </div>
+      </div>
+
     </section>
   );
 }
